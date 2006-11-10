@@ -19,7 +19,9 @@ let level_of_string = function
    | "info" -> LOG_INFO
    | "notice" -> LOG_NOTICE
    | "warning" -> LOG_WARNING
+   | "warn" -> LOG_WARNING
    | "err" -> LOG_ERR
+   | "error" -> LOG_ERR
    | "crit" -> LOG_CRIT
    | "alert" -> LOG_ALERT
    | "emerg" -> LOG_EMERG
@@ -245,7 +247,7 @@ object (self)
    val mutable max_level = max_level
    val mutable dst = dst
 
-   method set_max_level l = max_level <- int_of_level l
+   method set_max_level l = max_level <- int_of_level (level_of_string l)
 
    method set_destination (d:log_destination) = dst <- d
 
