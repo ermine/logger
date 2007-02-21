@@ -1,6 +1,6 @@
 OCAMLMAKEFILE = ../../OCamlMakefile
 
-SOURCES		= logger.ml
+SOURCES		= logger.mli logger.ml
 PRE_TARGETS	= pa_logger.cma
 PACKS		= strftime
 RESULT		= logger
