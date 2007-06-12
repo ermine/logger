@@ -17,7 +17,7 @@ let _ =
       log#debug LOG "debug string %s" "abc";
 
       let a = 2 +3 in
-      let () = log#printf LOG_DEBUG "abc %d" a in
+      let () = log#printf LOG_LOC "abc %d" a in
 	 try
 	    int_of_string "a"
 	 with exn ->
