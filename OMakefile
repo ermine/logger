@@ -2,8 +2,6 @@
 
 open ../../config
 
-OCAMLINCLUDES += $(LIBDIR)
-
 FILES[] =
    logger
 

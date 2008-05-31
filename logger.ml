@@ -1,5 +1,5 @@
 (*
- * 2005, 2006 (c) Anastasia Gornostaeva <ermine@ermine.pp.ru>
+ * 2005-2008 (c) Anastasia Gornostaeva <ermine@ermine.pp.ru>
  *)
 
 open Unix
@@ -132,13 +132,16 @@ object
       flush Pervasives.stderr
 end
 
+let time_format_fn () =
+   let tm = localtime (gettimeofday ()) in
+      Printf.sprintf "%02d/%02d/%d %02d:%02d:%02d" 
+	 tm.tm_mday tm.tm_mon (tm.tm_year+1900)
+	 tm.tm_hour tm.tm_min tm.tm_sec
+
 class logfile ?time_format ?truncate filename : log_destination =
    let time_format_fn = 
       match time_format with
-	 | None ->
-	      (fun () -> 
-		  Strftime.strftime "%d/%m/%Y %T" 
-		     ~tm:(localtime (gettimeofday ())))
+	 | None -> time_format_fn
 	 | Some f -> f 
    in
    let open_file () =

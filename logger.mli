@@ -1,3 +1,7 @@
+(*
+ * 2005-2008 (c) Anastasia Gornostaeva <ermine@ermine.pp.ru>
+ *)
+
 type level_t =
     LOG_DEBUG
   | LOG_INFO
