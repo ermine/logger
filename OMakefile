@@ -1,21 +1,18 @@
 .PHONY: makelib testlib install clean
 
-open ../../config
-
 FILES[] =
    logger
 
 LIB = logger
 
 section
-   BYTE_ENABLED = true
-   NATIVE_ENABLED = false
-   OCAMLOPTFLAGS += logger
+   OCAML_LIBS = logger
    OCAMLPPFLAGS = -pp 'camlp4o pa_extend.cmo q_MLast.cmo' 
    OCAMLDEPFLAGS += -pp 'camlp4o pa_extend.cmo q_MLast.cmo'                     
    OCAMLINCLUDES += +camlp4
-   pa_logger.cmi:
+   pa_logger.cmx pa_logger$(EXT_OBJ):
    pa_logger.cmo:
+   pa_logger.cmi:
 
 .DEFAULT: $(OCamlLibrary $(LIB), $(FILES)) \
           pa_logger.cmo
@@ -24,19 +21,12 @@ TEST = test
 TEST_FILES = test
 
 section
-   OCAMLFINDFLAGS = -pp 'camlp4o pa_extend.cmo q_MLast.cmo ./pa_logger.cmo'
-   OCAML_OTHER_LIBS = unix strftime
-   OCAMLINCLUDES += .
-   OCAMLLDFLAGS = logger
-   OCAMLPPFLAGS = -pp 'camlp4o ./pa_logger.cmo'
-   #OCAMLDEPFLAGS += -pp 'camlp4o pa_extend.cmo q_MLast.cmo'                     
+   OCAML_OTHER_LIBS = unix
+   OCAML_LIBS = logger
+   OCAMLPPFLAGS = -pp 'camlp4o pa_logger.cmo'
    test.cmx test$(EXT_OBJ):
    test.cmo:
    test.cmi:
-
-section
-   OCAML_OTHER_LIBS += unix strftime
-   OCAML_LIBS += logger
    OCamlProgram($(TEST), $(TEST_FILES))
 
 testlib: $(TEST)$(EXE)
