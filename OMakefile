@@ -6,6 +6,7 @@ FILES[] =
 LIB = logger
 
 section
+   BYTE_ENABLED = true
    OCAML_LIBS = logger
    OCAMLPPFLAGS = -pp 'camlp4o pa_extend.cmo q_MLast.cmo' 
    OCAMLDEPFLAGS += -pp 'camlp4o pa_extend.cmo q_MLast.cmo'                     
