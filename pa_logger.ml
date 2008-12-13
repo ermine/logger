@@ -1,5 +1,5 @@
 (*
- * (c) 2006 Anastasia Gornostaeva <ermine@ermine.pp.ru>
+ * (c) 2006-2008 Anastasia Gornostaeva <ermine@ermine.pp.ru>
  * 
  * LOG_FILE returns filename
  * LOG_LINE returns line number
@@ -12,19 +12,19 @@ open Syntax
 let _loc = Loc.ghost
 
 EXTEND Gram
-   GLOBAL: expr;
+GLOBAL: expr;
 
-   expr: LEVEL "simple"
-   [[ "LOG_FILE" ->
-	 let filename = Loc.file_name _loc in
-	    <:expr< $str:filename$ >>
+  expr: LEVEL "simple"
+    [[ "LOG_FILE" ->
+	    let filename = Loc.file_name _loc in
+	      <:expr< $str:filename$ >>
     | "LOG_LINE" ->
-	 let lineno = Loc.start_line _loc in
-	    <:expr< $int:string_of_int lineno$ >>
+	      let lineno = Loc.start_line _loc in
+	        <:expr< $int:string_of_int lineno$ >>
     | "LOG_LOC"; fmt = STRING ->
-	 let filename = Loc.file_name _loc in
-	 let lineno = Loc.start_line _loc in
-	 let fmt' = filename ^ ":" ^ string_of_int lineno ^ ": " ^ fmt in
-	    <:expr< $str:fmt'$ >>
+	      let filename = Loc.file_name _loc in
+	      let lineno = Loc.start_line _loc in
+	      let fmt' = filename ^ ":" ^ string_of_int lineno ^ ": " ^ fmt in
+	        <:expr< $str:fmt'$ >>
     ]];
 END

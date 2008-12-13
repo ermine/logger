@@ -9,7 +9,7 @@ section
    BYTE_ENABLED = true
    OCAML_LIBS = logger
    OCAMLPPFLAGS = -pp 'camlp4o pa_extend.cmo q_MLast.cmo' 
-   OCAMLDEPFLAGS += -pp 'camlp4o pa_extend.cmo q_MLast.cmo'                     
+   OCAMLDEPFLAGS += -pp 'camlp4o pa_extend.cmo q_MLast.cmo'
    OCAMLINCLUDES += +camlp4
    pa_logger.cmx pa_logger$(EXT_OBJ):
    pa_logger.cmo:
