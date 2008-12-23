@@ -66,6 +66,7 @@ class logger :
     method info : ('f, unit, string, unit) format4 -> 'f
     method notice : ('g, unit, string, unit) format4 -> 'g
     method printf : level_t -> ('h, unit, string, unit) format4 -> 'h
+    method get_destination : unit -> log_destination
     method set_destination : log_destination -> unit
     method set_max_level : string -> unit
     method warning : ('i, unit, string, unit) format4 -> 'i
