@@ -2,7 +2,6 @@ OCAMLMAKEFILE = ../../OCamlMakefile
 
 SOURCES		= logger.ml
 PRE_TARGETS	= pa_logger.cma
-PACKS		= strftime
 RESULT		= logger
 TRASH		= pa_logger.c* pa_logger.o
 
@@ -20,7 +19,7 @@ test_run:
 
 pa_logger.cma: pa_logger.ml
 	ocamlfind ocamlc -a -o pa_logger.cma \
-	   -pp 'camlp4o pa_extend.cmo q_MLast.cmo' -package camlp4,strftime \
+	   -pp 'camlp4o pa_extend.cmo q_MLast.cmo' -package camlp4 \
 	   pa_logger.ml
 
 include $(OCAMLMAKEFILE)
