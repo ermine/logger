@@ -1,6 +1,0 @@
-description = "Simple logger library"
-requires = "camlp4"
-version = "1"
-archive(byte) = "logger.cma"
-archive(native) = "logger.cmxa"
-archive(syntax,preprocessor) = "pa_logger.cma"
