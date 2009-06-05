@@ -1,5 +1,5 @@
 (*
- * 2005-2008 (c) Anastasia Gornostaeva <ermine@ermine.pp.ru>
+ * 2005-2009 (c) Anastasia Gornostaeva <ermine@ermine.pp.ru>
  *)
 
 open Unix
@@ -126,7 +126,7 @@ class log_stderr:log_destination =
 object
   method close = ()
   method reopen = ()
-  method write level str =
+  method write _level str =
     output_string Pervasives.stderr str;
     output_string Pervasives.stderr "\n";
     flush Pervasives.stderr
@@ -165,7 +165,7 @@ object
   method close =
     close_out ch
 
-  method write level str =
+  method write _level str =
     output_string ch (time_format_fn ());
     output_string ch " ";
     output_string ch str;
@@ -230,7 +230,7 @@ object
       
   method close = ignore (close_process_out ch)
     
-  method write (level:level_t) str =
+  method write (_level:level_t) str =
     output_string ch str;
     output_string ch "\n";
     flush ch
