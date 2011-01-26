@@ -1,0 +1,5 @@
+(* OASIS_START *)
+(* DO NOT EDIT (digest: 41a8e7ce7198ee32b2fa73f7f0af342d) *)
+Authors of logger
+Anastasia Gornostaeva
+(* OASIS_STOP *)

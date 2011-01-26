@@ -1,3 +1,15 @@
-"pa_logger.ml": camlp4orf, use_camlp4, use_logger
-<tests/test.*>: use_logger.syntax, use_unix
+# OASIS_START
+# DO NOT EDIT (digest: 642a3ba9fa86871a652cf4326ff3ceae)
+# Library logger
+<*.ml{,i}>: pkg_unix
+# Executable test
+<tests/test.{native,byte}>: pkg_unix
+<tests/*.ml{,i}>: pkg_unix
+# Library logger-syntax
+<*.ml{,i}>: pkg_camlp4.quotations.o
+<*.ml{,i}>: pkg_camlp4.lib
+<*.ml{,i}>: pkg_camlp4.extend
+# OASIS_STOP
 
+<pa_logger.ml>: syntax_camlp4o
+<tests/*.ml>: syntax_camlp4o, pkg_camlp4, pa_logger
