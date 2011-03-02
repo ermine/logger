@@ -1,0 +1,36 @@
+OASISFormat: 0.2
+Name:        logger
+Version:     0.1
+Synopsis:    Small logger
+Authors:     Anastasia Gornostaeva
+License:     BSD3
+LicenseFile: LICENCE
+Plugins:     DevFiles (0.2), META (0.2), StdFiles (0.2)
+BuildTools: ocamlbuild
+
+Library logger
+  Path:       .
+  Modules:    Logger
+  BuildDepends: unix
+
+Library "logger-syntax"
+  FindlibName: syntax
+  FindlibParent: logger
+  XMETAType:   syntax
+  XMETARequires: camlp4
+  Path:       .
+  Modules:    Pa_logger
+  BuildDepends: camlp4.lib, camlp4.extend, camlp4.quotations.o
+
+Executable test
+  Path: tests/
+  Install: false
+  CompiledObject: best
+  MainIs: test.ml
+  BuildDepends: unix
+
+SourceRepository github
+  Type:     git
+  Location: git://github.com/ermine/logger.git
+  Browser:  https://github.com/ermine/logger
+  
