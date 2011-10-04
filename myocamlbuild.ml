@@ -1,5 +1,5 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: b998751311bfaace828843cb3fa41571) *)
+(* DO NOT EDIT (digest: 7d041e9386d5c7978a93cc638ae728dc) *)
 module OASISGettext = struct
 # 21 "/usr/home/ermine/projects/ocaml/src/oasis/src/oasis/OASISGettext.ml"
   
@@ -451,7 +451,7 @@ end
 open Ocamlbuild_plugin;;
 let package_default =
   {
-     MyOCamlbuildBase.lib_ocaml = [("logger", []); ("logger-syntax", [])];
+     MyOCamlbuildBase.lib_ocaml = [("erm_logger", []); ("logger-syntax", [])];
      lib_c = [];
      flags = [];
      }

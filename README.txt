@@ -1,6 +1,6 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: f7b3883eaf74c4306616da5f9c50e57f) *)
-This is the README file for the logger distribution.
+(* DO NOT EDIT (digest: 9739e95227d6e3b1fde0d596ced1dadc) *)
+This is the README file for the erm_logger distribution.
 
 Small logger
 

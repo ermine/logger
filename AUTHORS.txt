@@ -1,5 +1,5 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: 41a8e7ce7198ee32b2fa73f7f0af342d) *)
-Authors of logger
+(* DO NOT EDIT (digest: 70eca78295d330c799797067c4fcd907) *)
+Authors of erm_logger
 Anastasia Gornostaeva
 (* OASIS_STOP *)

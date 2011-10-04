@@ -1,6 +1,6 @@
 # OASIS_START
-# DO NOT EDIT (digest: 642a3ba9fa86871a652cf4326ff3ceae)
-# Library logger
+# DO NOT EDIT (digest: e01046d4891e5375f2bd51bf12bc103c)
+# Library erm_logger
 <*.ml{,i}>: pkg_unix
 # Executable test
 <tests/test.{native,byte}>: pkg_unix

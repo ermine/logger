@@ -1,5 +1,5 @@
 OASISFormat: 0.2
-Name:        logger
+Name:        erm_logger
 Version:     0.1
 Synopsis:    Small logger
 Authors:     Anastasia Gornostaeva
@@ -8,7 +8,7 @@ LicenseFile: LICENCE
 Plugins:     DevFiles (0.2), META (0.2), StdFiles (0.2)
 BuildTools: ocamlbuild
 
-Library logger
+Library erm_logger
   Path:       .
   Modules:    Logger
   BuildDepends: unix

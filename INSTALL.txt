@@ -1,6 +1,6 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: ca77b71633e4d86b4af8e669369b1db2) *)
-This is the INSTALL file for the logger distribution.
+(* DO NOT EDIT (digest: 7f3bb21dc69f56ced86a3eec9a20e564) *)
+This is the INSTALL file for the erm_logger distribution.
 
 This package uses OASIS to generate its build system. See section OASIS for
 full information. 
