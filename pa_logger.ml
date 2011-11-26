@@ -1,5 +1,5 @@
 (*
- * (c) 2006-2008 Anastasia Gornostaeva <ermine@ermine.pp.ru>
+ * (c) 2006-2008 Anastasia Gornostaeva
  * 
  * LOG_FILE returns filename
  * LOG_LINE returns line number

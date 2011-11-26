@@ -1,5 +1,5 @@
 (*
- * 2005-2010 (c) Anastasia Gornostaeva <ermine@ermine.pp.ru>
+ * 2005-2010 (c) Anastasia Gornostaeva
  *)
 
 open Unix

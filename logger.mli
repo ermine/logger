@@ -1,5 +1,5 @@
 (*
- * 2005-2008 (c) Anastasia Gornostaeva <ermine@ermine.pp.ru>
+ * 2005-2008 (c) Anastasia Gornostaeva
  *)
 
 type level_t =
