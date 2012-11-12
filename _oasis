@@ -1,11 +1,11 @@
-OASISFormat: 0.2
+OASISFormat: 0.3
 Name:        erm_logger
 Version:     0.1
 Synopsis:    Small logger
 Authors:     Anastasia Gornostaeva
 License:     BSD3
 LicenseFile: LICENCE
-Plugins:     DevFiles (0.2), META (0.2), StdFiles (0.2)
+Plugins:     DevFiles (0.3), META (0.3), StdFiles (0.3)
 BuildTools: ocamlbuild
 
 Library erm_logger
@@ -15,7 +15,7 @@ Library erm_logger
 
 Library "logger-syntax"
   FindlibName: syntax
-  FindlibParent: logger
+  FindlibParent: erm_logger
   XMETAType:   syntax
   XMETARequires: camlp4
   Path:       .
