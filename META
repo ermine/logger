@@ -1,10 +1,20 @@
 # OASIS_START
-# DO NOT EDIT (digest: aa91c35fc35d76a72dfcaf1d8b098010)
+# DO NOT EDIT (digest: 83c0c3daa1627798cb749348f0b41f75)
 version = "0.1"
 description = "Small logger"
 requires = "unix"
 archive(byte) = "erm_logger.cma"
+archive(byte, plugin) = "erm_logger.cma"
 archive(native) = "erm_logger.cmxa"
+archive(native, plugin) = "erm_logger.cmxs"
 exists_if = "erm_logger.cma"
+package "syntax" (
+ version = "0.1"
+ description = "Small logger"
+ requires = "camlp4"
+ archive(syntax, preprocessor) = "logger-syntax.cma"
+ archive(syntax, toploop) = "logger-syntax.cma"
+ exists_if = "logger-syntax.cma"
+)
 # OASIS_STOP
 

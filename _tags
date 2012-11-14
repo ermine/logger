@@ -1,14 +1,29 @@
 # OASIS_START
-# DO NOT EDIT (digest: e01046d4891e5375f2bd51bf12bc103c)
+# DO NOT EDIT (digest: 6720ed5d60a502d6b21a7bf015fba1a5)
+# Ignore VCS directories, you can use the same kind of rule outside 
+# OASIS_START/STOP if you want to exclude directories that contains 
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
 # Library erm_logger
+"erm_logger.cmxs": use_erm_logger
 <*.ml{,i}>: pkg_unix
+# Library logger-syntax
+"logger-syntax.cmxs": use_logger-syntax
+<*.ml{,i}>: pkg_camlp4.lib
+<*.ml{,i}>: pkg_camlp4.extend
+<*.ml{,i}>: pkg_camlp4.quotations.o
 # Executable test
 <tests/test.{native,byte}>: pkg_unix
 <tests/*.ml{,i}>: pkg_unix
-# Library logger-syntax
-<*.ml{,i}>: pkg_camlp4.quotations.o
-<*.ml{,i}>: pkg_camlp4.lib
-<*.ml{,i}>: pkg_camlp4.extend
 # OASIS_STOP
 
 <pa_logger.ml>: syntax_camlp4o
